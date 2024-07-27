@@ -7,12 +7,11 @@ export default {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'login-bg': "url('./src/Images/Login-bgImg.jpg')",
-        'signup-bg': "url('./src/Images/Signup-bg-img.jpg')",
-        
-      })
+        'login-bg': "url('./src/assets/Images/Login-bgImg.jpg')",
+        'signup-bg': "url('./src/assets/Images/Signup-bg-img.jpg')",
+      }),
+     
     },
   },
   plugins: [],
 }
-

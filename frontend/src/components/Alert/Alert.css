@@ -1,36 +1,33 @@
 .alert {
-  position: fixed;
-  top: 150px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  padding: 15px 25px;
-  border-radius: 10px;
-  color: white;
-  text-align: center;
-  z-index: 1000;
-  font-size: 20px;
+  @apply fixed top-20 left-1/2 transform -translate-x-1/2 w-72 p-4 rounded-lg text-white text-center z-50 text-lg;
 }
 
 .alert p {
-  margin: 0;
+  @apply m-0;
 }
 
 .alert.success {
-  background-color: #4caf50;
+  @apply bg-green-500;
 }
 
 .alert.error {
-  background-color: #f44336; 
+  @apply bg-red-500;
+}
+
+.alert.info {
+  @apply bg-blue-500;
+}
+
+.alert.process {
+  @apply bg-yellow-500;
+}
+
+.alert.warning {
+  @apply bg-orange-500;
 }
 
 .alert .countdown {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 5px;
-  background-color: white;
-  width: 100%;
+  @apply absolute bottom-0 left-0 h-1 bg-white w-full;
   animation: countdown 4s linear forwards;
 }
 
@@ -40,5 +37,20 @@
   }
   to {
     width: 0;
+  }
+}.animate-marquee {
+  @apply text-gray-500;
+  white-space: nowrap; 
+  overflow: hidden;
+  display: block;
+  animation: marquee 12s linear infinite; 
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(60%); 
+  }
+  to {
+    transform: translateX(-30%); 
   }
 }

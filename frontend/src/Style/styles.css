@@ -1,29 +1,40 @@
-/* Background blur and dim effect */
+
 .bg-blur {
-    position: relative;
-    z-index: 0;
-  }
-  
-  .bg-blur::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dim effect */
-    z-index: -1;
-    backdrop-filter: blur(5px); /* Blur effect */
-  }
-  
-  /* Transparent and border effect on hover */
-  .transparent-bg {
-    background: rgba(255, 255, 255, 0.7);
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .transparent-bg:hover {
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-  }
-  
+  position: relative;
+  z-index: 0;
+}
+
+.bg-blur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: -1;
+  filter: blur(5px);
+}
+
+
+.transparent-bg {
+  background: rgba(255, 255, 255, 0.7);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transparent-bg:hover {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+
+input, button, label {
+  font-size: 0.75rem; 
+  padding: 0.25rem 0.5rem; 
+}
+
+
+.transparent-bg {
+  max-width: 20rem;
+  padding: 1rem; 
+}
